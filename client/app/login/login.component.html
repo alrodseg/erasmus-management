@@ -1,0 +1,30 @@
+<app-toast [message]="toast.message"></app-toast>
+
+<div fxLayout="column">
+  <div fxFlexAlign="center">
+    <h4>Login</h4>
+    <div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div fxLayout="row">
+          <mat-form-field>
+            <input matInput type='email' name="email" formControlName="email" placeholder="Email" autofocus>
+            <mat-icon matSuffix>{{'email'}}</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field>
+            <input matInput [type]="showPassword ? 'text': 'password'" name="password" formControlName="password"
+                   placeholder="Password">
+            <mat-icon matSuffix (click)="showPassword = !showPassword">{{showPassword ? 'visibility':
+              'visibility_off'}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

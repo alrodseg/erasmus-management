@@ -1,0 +1,23 @@
+<div>
+
+  <mat-toolbar color="primary">
+    <div class="logo"><a mat-button routerLink="/"><span>Home</span></a></div>
+    <span *ngIf="!auth.loggedIn">
+      <button mat-button routerLink="/esncard" routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact: true}">
+        ESNCard
+      </button>
+      <button mat-button routerLink="/login" routerLinkActive="nav-active">Events</button>
+      <span>
+        <button mat-button routerLink="/adminSettings" routerLinkActive="nav-active" *ngIf="auth.isAdmin">Admin settings</button>
+        <button mat-button routerLink="/settings" routerLinkActive="nav-active">User settings</button>
+        <button mat-button routerLink="/login" routerLinkActive="nav-active" color="warn" fxFlexAlign="end">
+          <mat-icon>{{'power_settings_new'}}</mat-icon>Logout</button>
+      </span>
+    </span>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

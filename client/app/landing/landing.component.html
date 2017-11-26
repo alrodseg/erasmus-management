@@ -1,0 +1,40 @@
+<div fxLayout="row">
+  <div fxFlex="1 1 400px">
+    <h4>Next events</h4>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let event of events">
+        <a matLine href="#">{{ event.name }} - {{event.date}}</a>
+        <button mat-icon-button>
+          <mat-icon>info</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </div>
+  <div fxFlex="3 1 auto">
+    <h4>Instructions</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec gravida mauris. Suspendisse sit amet nibh at
+      elit blandit mattis. Cras nisi tortor, luctus vitae sollicitudin et, tempus at massa. Vestibulum nec faucibus
+      orci, vitae gravida augue. In hac habitasse platea dictumst. Proin luctus ex vitae pellentesque rhoncus. Etiam
+      pellentesque quam quis malesuada dapibus. Cras rhoncus arcu ac auctor venenatis. Morbi mattis maximus posuere.
+    </p>
+    <p>
+      Suspendisse vitae faucibus nisi, ut congue urna. Duis lorem ipsum, congue ac tristique vel, porta a elit. Maecenas
+      imperdiet vestibulum libero at pellentesque. Nunc elementum feugiat tortor, a venenatis turpis mollis quis. Mauris
+      condimentum condimentum condimentum. Proin interdum viverra nisl laoreet ornare. Maecenas sed gravida odio, vitae
+      ultricies odio. Phasellus efficitur lectus eu lectus tempor faucibus. Nulla tincidunt erat at ante convallis
+      vulputate. Ut commodo dui a metus iaculis porta. Etiam commodo sed odio a convallis. Class aptent taciti sociosqu
+      ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque facilisis lacinia ipsum ac elementum.
+      Curabitur hendrerit nisi lacus, at malesuada mauris vulputate non.
+    </p>
+    <h4>News</h4>
+    <p>
+      Duis porta erat libero, et ullamcorper ligula mollis nec. Interdum et malesuada fames ac ante ipsum primis in
+      faucibus. Cras tempus nibh ac diam commodo, vel auctor augue lobortis. Mauris in arcu hendrerit, vestibulum lorem
+      ut, egestas ipsum. Etiam congue neque at tortor volutpat euismod. Aenean in molestie dolor, et euismod velit.
+      Pellentesque id cursus nisl, sit amet tincidunt ante. Quisque venenatis fermentum enim, eu porttitor erat pulvinar
+      at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    </p>
+  </div>
+</div>
